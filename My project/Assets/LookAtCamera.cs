@@ -16,6 +16,7 @@ public class LookAtCamera : MonoBehaviour
         foreach(Transform child in transform)
         {
             child.LookAt(Camera.main.transform);
+            child.Rotate(0, 180, 0);
         }
     }
 }
