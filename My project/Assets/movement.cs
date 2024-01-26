@@ -27,5 +27,19 @@ public class movement : MonoBehaviour
         {
             Application.Quit();
         }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (spdScale < 4.0f)
+            {
+                spdScale += 0.05f;
+            }
+        }
+        else
+        {
+            if (spdScale > 2.0f)
+            {
+                spdScale -= 0.05f;
+            }
+        }
     }
 }
