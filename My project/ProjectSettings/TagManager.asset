@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cb1
+  - edge
   layers:
   - Default
   - TransparentFX

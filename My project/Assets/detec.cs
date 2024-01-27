@@ -11,7 +11,6 @@ public class detec : MonoBehaviour
     {
         if (other.CompareTag("Cb1"))
         {
-            Debug.Log("Y");
             UI1.SetActive(true);
         }
         
