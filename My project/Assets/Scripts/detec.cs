@@ -6,19 +6,23 @@ using UnityEngine.UI;
 
 public class detec : MonoBehaviour
 {
-    bool entered = false;
+    public static bool entered = false;
     bool triggered = false;
     public TextMeshProUGUI ButText;
     public Image ButIma;
     private string OriText;
+    private Animator ButAni;
     // Start is called before the first frame update
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
+        
         if (other.CompareTag("Cb1"))
         {
+            Debug.Log("1");
+            entered = true;
             restoreimage();
             ButText.text = OriText;
-            entered = true;
+            
         }
         
     }
@@ -26,9 +30,10 @@ public class detec : MonoBehaviour
     {
         if (other.CompareTag("Cb1"))
         {
+            entered = false;
             clearimage();
             ButText.text = null;
-            entered = false;
+            
         }
 
     }
@@ -37,6 +42,7 @@ public class detec : MonoBehaviour
         OriText = ButText.text;
         clearimage();
         ButText.text = null;
+        ButAni = GetComponent<Animator>();
     }
 
     // Update is called once per frame
