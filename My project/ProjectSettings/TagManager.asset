@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cb1
   - edge
+  - cube
   layers:
   - Default
   - TransparentFX
