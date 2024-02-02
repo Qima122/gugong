@@ -1,42 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class detec : MonoBehaviour
 {
-    bool entered = false;
+    public static bool entered = false;
     bool triggered = false;
-    public TextMeshProUGUI ButText;
-    public Image ButIma;
-    private string OriText;
+    private Animator ButAni;
+    public static string[] enter = new string[10];
+    public static bool FirstEntered;
     // Start is called before the first frame update
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
-        if (other.CompareTag("Cb1"))
+        FirstEntered = true;
+        for (int i = 0; i < 10; i++)
         {
-            restoreimage();
-            ButText.text = OriText;
-            entered = true;
+            if (other.CompareTag("Cb" + (i + 1)))
+            {
+                entered = true;
+                enter[i] = "Cb" + (i + 1);
+                //restoreimage();
+                //ButText.text = OriText;
+
+            }
         }
-        
+
+
     }
     private void OnTriggerExit(UnityEngine.Collider other)
     {
-        if (other.CompareTag("Cb1"))
+        for (int i = 0; i < 10; i++)
         {
-            clearimage();
-            ButText.text = null;
-            entered = false;
+            if (other.CompareTag("Cb" + (i + 1)))
+            {
+                FirstEntered = false;
+                entered = false;
+                enter[i] = "Cb";
+                //clearimage();
+                //ButText.text = null;
+            }
         }
+
 
     }
     void Start()
     {
-        OriText = ButText.text;
-        clearimage();
-        ButText.text = null;
+        //clearimage();
+        //ButText.text = null;
+        ButAni = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,28 +60,41 @@ public class detec : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!triggered) {
-                    clearimage();
-                    ButText.text = null;
+                if (!triggered)
+                {
+                    //clearimage();
+                    //ButText.text = null;
                     triggered = true;
                 }
                 else
                 {
-                    restoreimage();
-                    ButText.text = OriText;
+                    //restoreimage();
+                    //ButText.text = OriText;
                     triggered = false;
                 }
             }
         }
     }
-    void clearimage()
+    public static void clearimage(Image ButIma)
     {
-        Color trans = new Color(0,0,0,0);
+        Color trans = new Color(0, 0, 0, 0);
         ButIma.color = trans;
     }
-    void restoreimage()
+    public static void restoreimage(Image ButIma)
     {
-        Color trans = new Color(255,255,255,255);
+        Color trans = new Color(255, 255, 255, 255);
         ButIma.color = trans;
+    }
+    public static void cleartext(TextMeshProUGUI text)
+    {
+        Color textcolor = text.color;
+        textcolor.a = 0f;
+        text.color = textcolor;
+    }
+    public static void restoretext(TextMeshProUGUI text)
+    {
+        Color textcolor = text.color;
+        textcolor.a = 1f;
+        text.color = textcolor;
     }
 }
