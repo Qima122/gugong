@@ -9,6 +9,7 @@ using UnityEngine.Rendering;
 using Unity.VisualScripting;
 using System;
 using System.Linq;
+using JetBrains.Annotations;
 
 public class detecBut : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class detecBut : MonoBehaviour
     bool state = false;
     static string obje; 
     string objmin;
+    public GameObject obj1;
+
 
     void Start()
     {
@@ -30,7 +33,8 @@ public class detecBut : MonoBehaviour
         objectName = gameObject.name;
         objIma = gameObject.GetComponent<Image>();
         ButText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-    }
+        
+}
 
     void Update()
     {
@@ -117,7 +121,7 @@ public class detecBut : MonoBehaviour
 
     void other(string objname, bool currentFound)
     {
-        //Debug.Log(objname);
+        Debug.Log(objname);
         GameObject obj = GameObject.Find(objname);
         if ((obj != null && obje != null) && (objname.CompareTo(obje) < 0 || objname.CompareTo(obje) > 0))
         {
@@ -176,6 +180,22 @@ public class detecBut : MonoBehaviour
                 obje = "Cb" + (num - 1);
                 other("Cb" + (num - 1), currentFound);
             }
+            if (obj1.gameObject.transform.Find(obje) == null)
+            {
+                Match match = Regex.Match(objname, @"\d+");
+                string result = match.Value;
+                int num = Int32.Parse(result);
+                activityQ = false;
+                detec.clearimage(objIma);
+                foreach (TextMeshProUGUI text in objText)
+                {
+                    detec.cleartext(text);
+                }
+                obje = "Cb1";
+                other("Cb1", currentFound);
+                Debug.Log(obje);
+            }
+            
         }
     }
 }
