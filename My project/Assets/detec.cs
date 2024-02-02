@@ -18,10 +18,10 @@ public class detec : MonoBehaviour
         FirstEntered = true;
         for (int i = 0; i < 10; i++)
         {
-            if (other.CompareTag("Cb" + (i + 1)))
+            if (other.CompareTag("Cb" + (i + 1))) //the "Cb" name tags are for exhibition items
             {
                 entered = true;
-                enter[i] = "Cb" + (i + 1);
+                enter[i] = "Cb" + (i + 1);  //note that if there are more than 10 objects, change here
                 //restoreimage();
                 //ButText.text = OriText;
 
@@ -56,9 +56,9 @@ public class detec : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (entered)
+        /*if (entered)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E)) 
             {
                 if (!triggered)
                 {
@@ -74,6 +74,7 @@ public class detec : MonoBehaviour
                 }
             }
         }
+        */
     }
     public static void clearimage(Image ButIma)
     {
@@ -88,7 +89,7 @@ public class detec : MonoBehaviour
     public static void cleartext(TextMeshProUGUI text)
     {
         Color textcolor = text.color;
-        textcolor.a = 0f;
+        textcolor.a = 0f; //alpha, 1: opaque, 0: transparant
         text.color = textcolor;
     }
     public static void restoretext(TextMeshProUGUI text)

@@ -19,11 +19,11 @@ public class detecBut : MonoBehaviour
     Image objIma;
     static bool activityE = false;
     static bool activityQ = false;
-    bool AlrProc;
+    bool AlrProc; //already processed, but i forgot what its use is, don't remove it otherwise the code gets bugged
     string save;
     bool state = false;
-    static string obje; 
-    string objmin;
+    static string obje;
+    string FirstObj;
     public GameObject obj1;
 
 
@@ -51,8 +51,9 @@ public class detecBut : MonoBehaviour
                     detec.enter[i] = "Cb";
                     detec.clearimage(objIma);
                     detec.cleartext(ButText);
-                    save = value + 1;
-                    obje = save; 
+                    save = value + 1; // value + 1, ex. Cb1 + 1 -> Cb11, then call the 'other()' function with input 'save'
+                    obje = save;
+                    FirstObj = value;
                     other(save, detec.entered);
                 }
             }
@@ -97,13 +98,13 @@ public class detecBut : MonoBehaviour
             {
                 state = false;
                 other(obje, true);
-                state = true;
+                state = true; //keep (state = true) until player leave the detection area
             }
             if (!detec.entered)
             {
                 state = false;
                 other(obje, false);
-                obje = null;
+                //obje = null;
             }
         }
     }
@@ -119,13 +120,12 @@ public class detecBut : MonoBehaviour
         //Debug.Log("Toggle " + activity);
     }
 
-    void other(string objname, bool currentFound)
+    void other(string objname, bool currentFound) //the function that can make buttons appear and disappear, 'currentFound' is like 'detec.entered'
     {
-        Debug.Log(objname);
         GameObject obj = GameObject.Find(objname);
         if ((obj != null && obje != null) && (objname.CompareTo(obje) < 0 || objname.CompareTo(obje) > 0))
         {
-            state = true;
+            state = true; //state, a variable that is similar to another "detec.entered", in order to make the button disappear if player leave the detection area
         }
         if (state || obj == null)
         {
@@ -152,25 +152,31 @@ public class detecBut : MonoBehaviour
             {
                 detec.restoretext(text);
             }
+            Match match = Regex.Match(objname, @"\d+"); // Regex function: extract numbers from string (ex. Cb11 -> 11)
+            string result = match.Value;
+            int num = Int32.Parse(result);
             if (activityE && objname != null)
             {
-                Match match = Regex.Match(objname, @"\d+");
-                string result = match.Value;
-                int num = Int32.Parse(result);
                 activityE = false;
                 detec.clearimage(objIma);
                 foreach (TextMeshProUGUI text in objText)
                 {
                     detec.cleartext(text);
                 }
-                obje = "Cb" + (num + 1);
-                other("Cb" + (num + 1), currentFound);
+                if (num < 10) //detect if input is Cb1 or Cb2 or Cb3 etc.. (if there are more than 10 objects, change here)
+                {
+                    obje = "Cb" + num + 1;
+                    other("Cb" + num + 1, currentFound);
+                }
+                else
+                {
+                    obje = "Cb" + (num + 1);
+                    other("Cb" + (num + 1), currentFound);
+                }
+                
             }
             else if (activityQ && objname != null)
             {
-                Match match = Regex.Match(objname, @"\d+");
-                string result = match.Value;
-                int num = Int32.Parse(result);
                 activityQ = false;
                 detec.clearimage(objIma);
                 foreach (TextMeshProUGUI text in objText)
@@ -180,19 +186,16 @@ public class detecBut : MonoBehaviour
                 obje = "Cb" + (num - 1);
                 other("Cb" + (num - 1), currentFound);
             }
-            if (obj1.gameObject.transform.Find(obje) == null)
+            if (obj1.gameObject.transform.Find(obje) == null) // detect if this is the last button (the new code that fixed "button problem")
             {
-                Match match = Regex.Match(objname, @"\d+");
-                string result = match.Value;
-                int num = Int32.Parse(result);
                 activityQ = false;
                 detec.clearimage(objIma);
                 foreach (TextMeshProUGUI text in objText)
                 {
                     detec.cleartext(text);
                 }
-                obje = "Cb1";
-                other("Cb1", currentFound);
+                obje = FirstObj;
+                other(FirstObj, true);
                 Debug.Log(obje);
             }
             
