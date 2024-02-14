@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cb1
+  - edge
+  - barrier
+  - Cb2
+  - Cb3
+  - Cb4
+  - Cb5
+  - Cb6
+  - Cb7
+  - Cb8
+  - Cb9
+  - Cb10
   layers:
   - Default
   - TransparentFX
