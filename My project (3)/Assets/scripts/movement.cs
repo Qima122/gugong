@@ -33,16 +33,24 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (spdScale < 0.65f)
+            if (!Input.GetKey(KeyCode.C))
             {
-                spdScale += 0.05f;
+                spdScale -= (spdScale - 0.65f) * 0.3f;
+            }
+            else
+            {
+                spdScale -= (spdScale - 0.2f) * 0.3f;
             }
         }
         else
         {
-            if (spdScale > 0.2f)
+            if (Input.GetKey(KeyCode.C))
             {
-                spdScale -= 0.05f;
+                spdScale -= (spdScale - 0.05f) * 0.3f;
+            }
+            else
+            {
+                spdScale -= (spdScale - 0.2f) * 0.3f;
             }
         }
     }
