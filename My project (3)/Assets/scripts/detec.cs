@@ -83,7 +83,7 @@ public class detec : MonoBehaviour
     }
     public static void restoreimage(Image ButIma)
     {
-        Color trans = new Color(255, 255, 255, 255);
+        Color trans = new Color(0, 0, 0, 200);
         ButIma.color = trans;
     }
     public static void cleartext(TextMeshProUGUI text)
