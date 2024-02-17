@@ -77,7 +77,7 @@ public class detecBut : MonoBehaviour
         }
         if (AlrProc && Input.GetKeyDown(KeyCode.Q) && detec.entered)
         {
-            if (!detec.FirstEntered)
+            if (!detec.FirstEntered && FirstObj != obje)
             {
                 toggleQ_Activ();
             }
@@ -122,6 +122,20 @@ public class detecBut : MonoBehaviour
 
     void other(string objname, bool currentFound) //the function that can make buttons appear and disappear, 'currentFound' is like 'detec.entered'
     {
+        if(objname != null)
+        {
+        Debug.Log(objname);
+            Match match = Regex.Match(objname, @"\d+"); // Regex function: extract numbers from string (ex. Cb11 -> 11)
+            string result = match.Value;
+            int num = Int32.Parse(result);
+            if (num > 100)
+            {
+                Debug.Log("he");
+                objname = null;
+                num = 1;
+            }
+        }
+        
         GameObject obj = GameObject.Find(objname);
         if ((obj != null && obje != null) && (objname.CompareTo(obje) < 0 || objname.CompareTo(obje) > 0))
         {
@@ -196,7 +210,6 @@ public class detecBut : MonoBehaviour
                 }
                 obje = FirstObj;
                 other(FirstObj, true);
-                Debug.Log(obje);
             }
             
         }
