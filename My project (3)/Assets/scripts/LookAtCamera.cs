@@ -5,9 +5,13 @@ using UnityEngine;
 public class LookAtCamera : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Vector3 initialPosition = new Vector3(0f, 0f, 0f);
+    public Vector3 initialRotation = new Vector3(0f, 0f, 0f);
+
     void Start()
     {
-        
+        transform.position = initialPosition;
+        transform.rotation = Quaternion.Euler(initialRotation);
     }
 
     // Update is called once per frame
