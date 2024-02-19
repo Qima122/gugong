@@ -24,6 +24,7 @@ public class movement : MonoBehaviour
         
         myTransform.Translate(0, 0, 15 * Time.deltaTime * Input.GetAxis("Vertical") * spdScale);
         myTransform.Translate(15 * Time.deltaTime * Input.GetAxis("Horizontal") * spdScale, 0, 0);
+        myTransform.Translate(0, 5 * Time.deltaTime * Input.GetAxis("Jump") * spdScale, 0);
         //rb.MovePosition(new Vector3(0, 0, 15 * Time.deltaTime * Input.GetAxis("Vertical") * spdScale));
         //rb.MovePosition(new Vector3(15 * Time.deltaTime * Input.GetAxis("Horizontal") * spdScale, 0, 0));
         myTransform.localEulerAngles = new Vector3(myTransform.rotation.eulerAngles.x, myTransform.rotation.eulerAngles.y, 0);
