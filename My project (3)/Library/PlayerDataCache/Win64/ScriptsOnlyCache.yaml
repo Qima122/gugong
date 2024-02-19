@@ -1,8 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - LookAtCamera
     - NewBehaviourScript
+    - Readme
     - detec
     - detecBut
     - movement
@@ -326,6 +329,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -373,155 +378,155 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18854}
     - Class: 114
-      Script: {instanceID: 19284}
+      Script: {instanceID: 19286}
     - Class: 114
-      Script: {instanceID: 19422}
+      Script: {instanceID: 19424}
     - Class: 114
-      Script: {instanceID: 19474}
+      Script: {instanceID: 19476}
     - Class: 114
-      Script: {instanceID: 19490}
+      Script: {instanceID: 19492}
     - Class: 114
-      Script: {instanceID: 20038}
+      Script: {instanceID: 20040}
     - Class: 114
-      Script: {instanceID: 20226}
+      Script: {instanceID: 20228}
     - Class: 114
-      Script: {instanceID: 20264}
+      Script: {instanceID: 20266}
     - Class: 114
-      Script: {instanceID: 20308}
+      Script: {instanceID: 20310}
     - Class: 114
-      Script: {instanceID: 20360}
+      Script: {instanceID: 20362}
     - Class: 114
-      Script: {instanceID: 20410}
+      Script: {instanceID: 20412}
     - Class: 114
-      Script: {instanceID: 20424}
+      Script: {instanceID: 20426}
     - Class: 114
-      Script: {instanceID: 20608}
+      Script: {instanceID: 20610}
     - Class: 114
-      Script: {instanceID: 20626}
+      Script: {instanceID: 20628}
     - Class: 114
-      Script: {instanceID: 21096}
+      Script: {instanceID: 21098}
     - Class: 114
-      Script: {instanceID: 21104}
+      Script: {instanceID: 21106}
     - Class: 114
-      Script: {instanceID: 21180}
+      Script: {instanceID: 21182}
     - Class: 114
-      Script: {instanceID: 21288}
+      Script: {instanceID: 21290}
     - Class: 114
-      Script: {instanceID: 21302}
+      Script: {instanceID: 21304}
     - Class: 114
-      Script: {instanceID: 21340}
+      Script: {instanceID: 21342}
     - Class: 114
-      Script: {instanceID: 21382}
+      Script: {instanceID: 21384}
     - Class: 114
-      Script: {instanceID: 21776}
+      Script: {instanceID: 21778}
     - Class: 114
-      Script: {instanceID: 21836}
+      Script: {instanceID: 21838}
     - Class: 114
-      Script: {instanceID: 22438}
+      Script: {instanceID: 22440}
     - Class: 114
-      Script: {instanceID: 22708}
+      Script: {instanceID: 22646}
     - Class: 114
-      Script: {instanceID: 22790}
+      Script: {instanceID: 22712}
     - Class: 114
-      Script: {instanceID: 22850}
+      Script: {instanceID: 22794}
     - Class: 114
-      Script: {instanceID: 23700}
+      Script: {instanceID: 22854}
     - Class: 114
-      Script: {instanceID: 23760}
+      Script: {instanceID: 23704}
     - Class: 114
-      Script: {instanceID: 23918}
+      Script: {instanceID: 23764}
     - Class: 114
-      Script: {instanceID: 24098}
+      Script: {instanceID: 23922}
     - Class: 114
-      Script: {instanceID: 24204}
+      Script: {instanceID: 24102}
     - Class: 114
-      Script: {instanceID: 24284}
+      Script: {instanceID: 24208}
     - Class: 114
-      Script: {instanceID: 24620}
+      Script: {instanceID: 24288}
     - Class: 114
-      Script: {instanceID: 24980}
+      Script: {instanceID: 24624}
     - Class: 114
-      Script: {instanceID: 25046}
+      Script: {instanceID: 24984}
     - Class: 114
-      Script: {instanceID: 25098}
+      Script: {instanceID: 25050}
     - Class: 114
-      Script: {instanceID: 25314}
+      Script: {instanceID: 25102}
     - Class: 114
-      Script: {instanceID: 25428}
+      Script: {instanceID: 25318}
     - Class: 114
-      Script: {instanceID: 25460}
+      Script: {instanceID: 25432}
     - Class: 114
-      Script: {instanceID: 25702}
+      Script: {instanceID: 25464}
     - Class: 114
-      Script: {instanceID: 25778}
+      Script: {instanceID: 25706}
     - Class: 114
-      Script: {instanceID: 26402}
+      Script: {instanceID: 25782}
     - Class: 114
-      Script: {instanceID: 26470}
+      Script: {instanceID: 26406}
     - Class: 114
-      Script: {instanceID: 26658}
+      Script: {instanceID: 26474}
     - Class: 114
-      Script: {instanceID: 26896}
+      Script: {instanceID: 26662}
     - Class: 114
-      Script: {instanceID: 27220}
+      Script: {instanceID: 26900}
     - Class: 114
-      Script: {instanceID: 27226}
+      Script: {instanceID: 27228}
     - Class: 114
-      Script: {instanceID: 27370}
+      Script: {instanceID: 27234}
     - Class: 114
-      Script: {instanceID: 27456}
+      Script: {instanceID: 27378}
     - Class: 114
-      Script: {instanceID: 27468}
+      Script: {instanceID: 27464}
     - Class: 114
-      Script: {instanceID: 27556}
+      Script: {instanceID: 27476}
     - Class: 114
-      Script: {instanceID: 27686}
+      Script: {instanceID: 27564}
     - Class: 114
-      Script: {instanceID: 27824}
+      Script: {instanceID: 27694}
     - Class: 114
-      Script: {instanceID: 28116}
+      Script: {instanceID: 27832}
     - Class: 114
-      Script: {instanceID: 28968}
+      Script: {instanceID: 28124}
     - Class: 114
-      Script: {instanceID: 29308}
+      Script: {instanceID: 28976}
     - Class: 114
-      Script: {instanceID: 30332}
+      Script: {instanceID: 38180}
     - Class: 114
-      Script: {instanceID: 30334}
+      Script: {instanceID: 38218}
     - Class: 114
-      Script: {instanceID: 30336}
+      Script: {instanceID: 38220}
     - Class: 114
-      Script: {instanceID: 30338}
+      Script: {instanceID: 38222}
     - Class: 114
-      Script: {instanceID: 30340}
+      Script: {instanceID: 38224}
     - Class: 114
-      Script: {instanceID: 30342}
+      Script: {instanceID: 38226}
     - Class: 114
-      Script: {instanceID: 30344}
+      Script: {instanceID: 38228}
     - Class: 114
-      Script: {instanceID: 30346}
+      Script: {instanceID: 38230}
     - Class: 114
-      Script: {instanceID: 30348}
+      Script: {instanceID: 38232}
     - Class: 114
-      Script: {instanceID: 30350}
+      Script: {instanceID: 38234}
     - Class: 114
-      Script: {instanceID: 30352}
+      Script: {instanceID: 38236}
     - Class: 114
-      Script: {instanceID: 30354}
+      Script: {instanceID: 38238}
     - Class: 114
-      Script: {instanceID: 30356}
+      Script: {instanceID: 38240}
     - Class: 114
-      Script: {instanceID: 30358}
+      Script: {instanceID: 38242}
     - Class: 114
-      Script: {instanceID: 30360}
+      Script: {instanceID: 38244}
     - Class: 114
-      Script: {instanceID: 30362}
+      Script: {instanceID: 38246}
     - Class: 114
-      Script: {instanceID: 30364}
+      Script: {instanceID: 38248}
     - Class: 114
-      Script: {instanceID: 30366}
+      Script: {instanceID: 38250}
     - Class: 114
-      Script: {instanceID: 30368}
+      Script: {instanceID: 38252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -801,7 +806,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
+      Hash: 865c8e4dfb6983776f049118692f7c70
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LookAtCamera
@@ -1477,6 +1482,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: zoom
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2241,6 +2252,12 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: e4c654f2c22e97586651b87d4668f2fe
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Readme
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -2551,19 +2568,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX.Utility
     className: VFXInputAxisBinder
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: zoom
-  - hash:
-      serializedVersion: 2
-      Hash: e4c654f2c22e97586651b87d4668f2fe
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Readme
   platform: 19
   scenePathNames:
   - Assets/OutdoorsScene.unity
-  playerPath: D:/gugong20240217_fix/My project (3).exe
+  playerPath: D:/gugong 20240219/My project (3).exe
