@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class zoom : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         Camera cam_1 = GetComponent<Camera>();
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 17.004717, g: 16.636263, b: 21.263277, a: 1}
+  m_IndirectSpecularColor: {r: 17.69055, g: 17.89519, b: 25.363132, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5506,7 +5506,6 @@ GameObject:
   - component: {fileID: 267641655}
   - component: {fileID: 267641654}
   - component: {fileID: 267641653}
-  - component: {fileID: 267641652}
   - component: {fileID: 267641651}
   m_Layer: 5
   m_Name: Cb14
@@ -5551,33 +5550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &267641652
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267641649}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &267641653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10110,7 +10082,6 @@ GameObject:
   - component: {fileID: 543645896}
   - component: {fileID: 543645895}
   - component: {fileID: 543645894}
-  - component: {fileID: 543645893}
   - component: {fileID: 543645892}
   m_Layer: 5
   m_Name: Cb15
@@ -10155,33 +10126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &543645893
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543645890}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &543645894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10759,7 +10703,6 @@ GameObject:
   - component: {fileID: 586794545}
   - component: {fileID: 586794544}
   - component: {fileID: 586794543}
-  - component: {fileID: 586794542}
   - component: {fileID: 586794541}
   m_Layer: 5
   m_Name: Cb1
@@ -10802,33 +10745,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &586794542
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586794539}
-  serializedVersion: 4
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &586794543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11366,6 +11282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e190e79c2f73de3458d3fceecf4ed966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam_transform: {fileID: 1019119382}
   initialPosition: {x: 0, y: 0, z: 0}
   initialRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &623386008
@@ -15861,7 +15778,6 @@ GameObject:
   - component: {fileID: 917250376}
   - component: {fileID: 917250375}
   - component: {fileID: 917250374}
-  - component: {fileID: 917250373}
   - component: {fileID: 917250372}
   m_Layer: 5
   m_Name: Cb12
@@ -15906,33 +15822,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &917250373
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917250370}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &917250374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17005,7 +16894,6 @@ GameObject:
   - component: {fileID: 956717695}
   - component: {fileID: 956717694}
   - component: {fileID: 956717693}
-  - component: {fileID: 956717692}
   - component: {fileID: 956717691}
   m_Layer: 5
   m_Name: Cb11
@@ -17050,33 +16938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &956717692
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956717689}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &956717693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30221,7 +30082,6 @@ GameObject:
   - component: {fileID: 1989279724}
   - component: {fileID: 1989279723}
   - component: {fileID: 1989279722}
-  - component: {fileID: 1989279721}
   - component: {fileID: 1989279720}
   m_Layer: 5
   m_Name: Cb13
@@ -30266,33 +30126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj1: {fileID: 623386006}
---- !u!54 &1989279721
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989279718}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1989279722
 MonoBehaviour:
   m_ObjectHideFlags: 0
