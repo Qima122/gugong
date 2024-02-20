@@ -9,7 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     public GameObject sphe;
     public Transform target;
-    public float speed = 1f;
+    public float speed = 2f;
     private Transform tf;
     
     void Start()
