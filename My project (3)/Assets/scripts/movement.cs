@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class movement : MonoBehaviour
@@ -7,9 +8,12 @@ public class movement : MonoBehaviour
     public Transform myTransform;
     public float spdScale;
     private Rigidbody rb;
+    private Vector3 positionNow;
+    private BoxCollider Mycollider;
     // Start is called before the first frame update
     void Start()
     {
+        Mycollider = GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
         myTransform = GetComponent<Transform>();
         spdScale = 0.2f;
@@ -19,6 +23,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         myTransform.Rotate(-60 * 2 * Time.deltaTime * Input.GetAxis("Mouse Y"), 0, 0);
         myTransform.Rotate(0, 60 * 2 * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         
@@ -54,5 +59,13 @@ public class movement : MonoBehaviour
                 spdScale -= (spdScale - 0.2f) * 0.3f;
             }
         }
+        if (Mycollider.isTrigger)
+        {
+            myTransform.position = positionNow;
+        }
+    }
+    private void LateUpdate()
+    {
+        positionNow = myTransform.position;
     }
 }

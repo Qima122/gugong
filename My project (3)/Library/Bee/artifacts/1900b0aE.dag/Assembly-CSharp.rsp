@@ -376,6 +376,7 @@
 "Assets/scripts/detecBut.cs"
 "Assets/scripts/LookAtCamera.cs"
 "Assets/scripts/movement.cs"
+"Assets/scripts/track_camera.cs"
 "Assets/scripts/zoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

@@ -16,6 +16,7 @@ TagManager:
   - Cb8
   - Cb9
   - Cb10
+  - wall
   layers:
   - Default
   - TransparentFX
