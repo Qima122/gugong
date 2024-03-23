@@ -45,7 +45,7 @@ public class detecBut : MonoBehaviour
             {
                 detec.restoreimage(objIma);
                 detec.restoretext(ButText);
-                if (Input.GetKeyDown(KeyCode.E) && detec.entered)
+                if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && detec.entered)
                 {
                     AlrProc = true;
                     detec.enter[i] = "Cb";
@@ -66,7 +66,7 @@ public class detecBut : MonoBehaviour
             }
         }
 
-        if (AlrProc && Input.GetKeyDown(KeyCode.E) && detec.entered)
+        if (AlrProc && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && detec.entered)
         {
             if (!detec.FirstEntered)
             {
@@ -75,7 +75,7 @@ public class detecBut : MonoBehaviour
             other(save, detec.entered);
             detec.FirstEntered = false;
         }
-        if (AlrProc && Input.GetKeyDown(KeyCode.Q) && detec.entered)
+        if (AlrProc && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button4)) && detec.entered)
         {
             if (!detec.FirstEntered && FirstObj != obje)
             {

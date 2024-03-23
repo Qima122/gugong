@@ -24,6 +24,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         
+        
         myTransform.Rotate(-60 * 2 * Time.deltaTime * Input.GetAxis("Mouse Y"), 0, 0);
         myTransform.Rotate(0, 60 * 2 * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         
@@ -39,7 +40,7 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (!Input.GetKey(KeyCode.C))
+            if (!Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button7))
             {
                 spdScale -= (spdScale - 0.65f) * 0.3f;
             }
@@ -50,7 +51,7 @@ public class movement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.C))
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button7))
             {
                 spdScale -= (spdScale - 0.05f) * 0.3f;
             }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class zoom : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class zoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKey(KeyCode.C))
+       if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button7))
         {
             GetComponent<Camera>().fieldOfView -= (float)((GetComponent<Camera>().fieldOfView - 30) * 0.1);
         } 
