@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
+using UnityEditor;
+using System;
 
 public class movement : MonoBehaviour
 {
@@ -37,7 +40,7 @@ public class movement : MonoBehaviour
         {
             Application.Quit();
         }
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Joystick1Button6))
         {
             if (!Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button7))
             {
@@ -67,5 +70,32 @@ public class movement : MonoBehaviour
     private void LateUpdate()
     {
         positionNow = myTransform.position;
+    }
+    private void FixedUpdate()
+    {
+        Debug.ClearDeveloperConsole();
+        Utils.ClearLogConsole();
+    }
+    public static class Utils
+    {
+        static MethodInfo _clearConsoleMethod;
+        static MethodInfo clearConsoleMethod
+        {
+            get
+            {
+                if (_clearConsoleMethod == null)
+                {
+                    Assembly assembly = Assembly.GetAssembly(typeof(SceneView));
+                    Type logEntries = assembly.GetType("UnityEditor.LogEntries");
+                    _clearConsoleMethod = logEntries.GetMethod("Clear");
+                }
+                return _clearConsoleMethod;
+            }
+        }
+
+        public static void ClearLogConsole()
+        {
+            clearConsoleMethod.Invoke(new object(), null);
+        }
     }
 }
